@@ -1,24 +1,23 @@
-#
-# Read and write files using the built-in Python file methods
-# LinkedIn Learning Python course by Joe Marini
-#
+#Anoushka Saha
+#Files Practice
+#Python for Data Analysis
+#July 10th, 2024
 
+#Reading and writing files with the built-in Python file methods
 
-def main():  
-    # Open a file for writing and create it if it doesn't exist
+def main():
 
-    
-    # Open the file for appending text to the end
+    #open() - opening a file 
+    #"w" - to be able to write to the file
+    #"+" - tells python to create the file if it doesn't exist
+    myfile = open("textfile.txt", "w+") 
 
+    #Writing lines of data to file
+    for i in range(10):
+        myfile.write("This is some text\n")
 
-    # write some lines of data to the file
+    #Close the file when finished
+    myfile.close()   
 
-    
-    # close the file when done
-
-    
-    # Open the file back up and read the contents
-
-    
 if __name__ == "__main__":
     main()
