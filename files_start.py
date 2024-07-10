@@ -26,8 +26,11 @@ def main():
     # Opening file for read access
     myfile = open("textfile.txt", "r")
     if myfile.mode == 'r':
-        content = myfile.read()
-        print(content)
+        # content = myfile.read()
+        # print(content)
+        fileline = myfile.readlines()
+        for x in fileline:
+            print(x)
 
 if __name__ == "__main__":
     main()
