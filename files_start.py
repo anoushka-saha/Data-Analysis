@@ -10,11 +10,15 @@ def main():
     #open() - opening a file 
     #"w" - to be able to write to the file
     #"+" - tells python to create the file if it doesn't exist
-    myfile = open("textfile.txt", "w+") 
+    #myfile = open("textfile.txt", "w+") 
+
+    #Opening file for appending text to end
+    myfile = open("textfile.txt", "a+")
 
     #Writing lines of data to file
     for i in range(10):
-        myfile.write("This is some text\n")
+        #myfile.write("This is some text\n")
+        myfile.write("This is some new text\n")
 
     #Close the file when finished
     myfile.close()   
