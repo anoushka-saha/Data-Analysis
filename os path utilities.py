@@ -23,5 +23,17 @@ def main():
     print("Item's path: ", path.realpath("textfile.txt"))
     print("Item's path and name: ", path.split(path.realpath("textfile.txt")))
 
+    # Get modification time
+    t = time.ctime(path.getmtime("textfile.txt"))
+    print(t)
+    print(datetime.datetime.fromtimestamp(path.getmtime("textfile.txt")))
+
+    # Calculate how long ago the file was modified
+    td = datetime.datetime.now() - datetime.datetime.fromtimestamp(path.getmtime("textfile.txt"))
+    print("It has been ", td, " since the file was modified.")
+    print ("Or, ", td.total_seconds(), " seconds.")
+
+
+
 if __name__ == "__main__":
     main()
